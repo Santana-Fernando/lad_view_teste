@@ -1,0 +1,19 @@
+<form [formGroup]="form">
+  <label>cpf </label>
+  <input id="cpfOuCnpj" type="text" formControlName="cpfOuCnpj" />
+  <label>nome </label>
+  <input id="nome" type="text" formControlName="nome" />
+  <label>email </label>
+  <input id="email" type="email" formControlName="email" />
+  <label>senha </label>
+  <input id="senha" type="password" formControlName="senha" />
+  <label>logradouro </label>
+  <input id="logradouro" type="text" formControlName="logradouro" />
+  <label>numero </label>
+  <input id="numero" type="text" formControlName="numero" />
+  <label>cep </label>
+  <input id="cep" type="text" formControlName="cep" />
+  <label>telefone1 </label>
+  <input id="telefone1" type="text" formControlName="telefone1" />
+  <button (click)="doSend()">submit</button>
+</form>

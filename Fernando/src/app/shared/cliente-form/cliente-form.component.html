@@ -1,0 +1,46 @@
+<div class="container">
+  <form [formGroup]="form">
+    <label>cpf ou cnpj</label><br>
+    <input id="cpfOuCnpj" type="text" placeholder="00000000000" formControlName="cpfOuCnpj" /><br><br>
+    <label>nome </label><br>
+    <input id="nome" type="text" formControlName="nome" /><br><br>
+    <label>email </label><br>
+    <input id="email" type="email" placeholder="exemple@gmail.com" formControlName="email" /><br><br>
+    <label>senha </label><br>
+    <input id="senha" type="password" formControlName="senha" /><br><br>
+    <label>logradouro </label><br>
+    <input id="logradouro" type="text" formControlName="logradouro" /><br><br>
+    <label>numero </label><br>
+    <input id="numero" type="number" formControlName="numero" /><br><br>
+    <label>cep </label><br>
+    <input id="cep" type="text" placeholder="00000-000" formControlName="cep" /><br><br>
+    <label>telefone</label><br>
+    <input id="telefone1" type="text" maxlength="14" placeholder="(00) 0000-0000 ou (00) 00000-0000" formControlName="telefone1"/><br><br>
+    <div class="vertical-center">
+      <button class="myButton" (click)="doSend()">Cadastrar</button>
+    </div>  
+  </form>
+</div>
+<br><br>
+
+<div class="container">
+  <table mdbTable>
+    <thead>
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let el of usuarios">
+        <td>{{el.cpfOuCnpj}}</td>
+        <td>{{el.nome}}</td>
+        <td>{{el.email}}</td>
+        <td>{{el.logradouro}}</td>
+        <td>{{el.numero}}</td>
+        <td>{{el.cep}}</td>
+        <td>{{el.telefone1}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
